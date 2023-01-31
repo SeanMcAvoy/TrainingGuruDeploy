@@ -1,12 +1,12 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config();
 
-const database = new Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USER_NAME, process.env.DATABASE_PW, {
+const database = new Sequelize('TrainingGuru', 'admin', 'TrainingGuru', {
     dialect: 'mysql',
-    host: process.env.DATABASE_URL,
+    host: 'traininggurudbonline.cxnpilaou3nh.eu-west-1.rds.amazonaws.com',
     port: '3306'
 
 });
+
 
 
 module.exports = database;

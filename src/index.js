@@ -20,7 +20,9 @@ app.use((_, res, next) => {
     next();
 });
 
-
+app.get('/', function(req, res, next) {
+    res.json({message: 'alive'});
+});
 app.use("/Client",clientRoute);
 app.use("/Trainer",trainerRoute);
 app.use("/Client",workoutRoute);
